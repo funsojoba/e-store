@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>EPIC Store</title>
+</head>
+
+<body>
+
+    <div class="aside" id="aside">
+
+        <div class="aside-content">
+
+            <div class="aside-content-icon">
+                <i class="fa fa-times fa-2x" onclick="app.closeSideBar()"></i>
+            </div>
+
+            <div class="aside-content-item">
+
+                <!-- <div class="aside-content-item-list">
+                    <div class="product">
+                        <img src="./asset/1.png" alt="">
+                    </div>
+                    <div class="details">
+                        <h3 id="name">SUPRA</h3>
+                        <p id="price">$1200</p>
+                    </div>
+                    <div class="count" >
+                        <span><i class="fas fa-times-circle fa-lg"></i></span>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="aside-total">
+                <h3> Total $<span class="total"> 0</span> </h3>
+            </div>
+
+            <div class="aside-content-button">
+                <button id="check-out">CHECK OUT</button> &nbsp;
+                <button id="clear-cart">Clear cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="./asset/logo1.png" alt="Epic Store">
+            </div>
+            <div class="nav-search">
+                <form>
+                    <input type="text" id="search" name="seach">
+                    <button><i class="fas fa-search fa-lg"></i></button>
+                </form>
+            </div>
+
+            <div class="nav-icon">
+                <div class="nav-icon-cart">
+                    <div class="nav-icon-cart-counter">
+                        0
+                    </div>
+                    <i class="fas fa-shopping-cart fa-lg" onclick="app.openSideBar()"></i>
+                </div>
+                <div class="nav-icon-user">
+                    <i class="fa fa-user fa-lg"></i>
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="header-content">
+
+                <h1>EPIC STORE</h1>
+                <a href="#">EXPLORE <i class="fas fa-caret-right"></i></a>
+            </div>
+        </header>
+
+        <!-- SECTION ONE -->
+
+        <div class="section-one">
+            <div class="section-one-content">
+                <h5>FEATURED PRODUCT</h5>
+                <h1>PAT-KWON</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam rerum eius facilis maxime
+                    delectus eveniet maiores odit quae impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil vero alias illum numquam aliquid repellat dolore, aut ea recusandae eaque!</p>
+            </div>
+
+            <div class="section-one-image">
+                <img src="./asset/1.png" alt="EPIC STORE">
+            </div>
+        </div>
+
+        <!-- SECTION TWO -->
+
+        <div class="section-wrapper">
+            <div class="section-two-header">
+                <h3>PRODUCTS</h3>
+            </div>
+            <div class="section-two">
+
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="subscribe">
+                <div class="subscribe-text">
+                    <p>Subscribe to our newsletter <br>
+                        to get updates on our latest offers!</p>
+                </div>
+                <div class="subscribe-form">
+                    <form>
+                        <input type="text" placeholder="example@example.com">
+                        <button>SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="link">
+                <div class="link-one">
+                    <ul>
+                        <li> <a href="#">Help Center</a> </li>
+                        <li> <a href="#">Return Policy</a> </li>
+                        <li> <a href="#">Delivery Policy</a> </li>
+                        <li> <a href="#">Privacy Policy</a> </li>
+                    </ul>
+                </div>
+
+                <div class="link-one">
+                    <ul>
+                        <li> <a href="#">About EPIC</a> </li>
+                        <li> <a href="#">EPIC Wears</a> </li>
+                        <li> <a href="#">EPIC Logistics</a> </li>
+                        <li> <a href="#">EPIC This</a> </li>
+                        <li> <a href="#">EPIC That</a> </li>
+                        <li> <a href="#">Terms &amp; Conditions</a> </li>
+                    </ul>
+                </div>
+
+                <div class="link-social">
+                    <h3>JOIN US</h3>
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+
+                <div class="link-image">
+                    <img src="./asset/logo.png" alt="EPIC STORE">
+                    <h3>EPIC STORE</h3>
+                </div>
+            </div>
+
+            <div class="date">
+                &copy; EPIC STORE <span id="full-year"> 2020</span>
+            </div>
+        </footer>
+
+        <script src="./app.js"></script>
+</body>
+
+</html>
