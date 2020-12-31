@@ -1,3 +1,5 @@
+"use strict";
+
 const sideBar = document.getElementById("aside");
 const body = document.querySelector("body");
 const mainBody = document.querySelector(".main");
@@ -10,6 +12,9 @@ let navIcon = document.querySelector(".nav-icon-cart");
 let totalItemPrice = document.querySelector(".total");
 let removeBtn = document.querySelectorAll(".close");
 let emptyCart = document.getElementById("clear-cart");
+let cardTotalPrice = document.getElementById("card-total-amount");
+let checkOutButton = document.getElementById("check-out");
+let checkOutModal = document.querySelector(".check-out-modal");
 
 let shoeProduct = [
   { name: "SUPRA", price: 1200, img: "./asset/3.png" },
@@ -89,19 +94,20 @@ const app = {
         cartNumber.innerHTML = cartItem.length;
 
         totalItemPrice.innerHTML = this.getTotalCartPrice();
+
+        this.getCloseBtn();
         this.openSideBar();
-        console.log(this.getCloseBtn());
       });
     });
   },
-  getCloseBtn: function(){
-    let closeBtns = document.querySelectorAll(".close");
-    
-    closeBtns.forEach((item, index)=>{
-        item.addEventListener("click", ()=>{
-            return item;
-        })
-    })
+  getCloseBtn: function (e) {
+    let cartCloseBtn = document.querySelectorAll(".close");
+
+    cartCloseBtn.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        console.log(index);
+      });
+    });
   },
 
   getTotalCartPrice: function () {
@@ -110,9 +116,8 @@ const app = {
     });
 
     return total;
-  }
+  },
 };
-
 
 //meant to open navBar with the cart
 navIcon.addEventListener("click", () => {
@@ -120,20 +125,27 @@ navIcon.addEventListener("click", () => {
 });
 
 //close navBar by clicking on the body
-
 body.addEventListener("click", (e) => {
-  if (
-    !e.target.classList.contains("aside-content-item") &&
-    !e.target.classList.contains("buy") &&
-    !e.target.classList.contains("fa-times-circle") &&
-    e.target.classList.contains("nav-icon-cart")
-  ) {
+  if (e.target.classList.contains("fade")) {
     app.closeSideBar();
   }
 });
 
-
-
-
 app.displayShoeProduct();
 app.getBuyButton();
+
+checkOutButton.addEventListener("click", () => {
+  app.closeSideBar();
+  checkOutModal.style.display = "flex";
+  cardTotalPrice.innerHTML = `$ ${app.getTotalCartPrice()}`;
+});
+
+checkOutModal.addEventListener("click", (e) => {
+  // console.log(e.target.classList)
+
+  if (e.target.classList.contains("check-out-modal")) {
+    checkOutModal.style.display = "none";
+  } else {
+    console.log("no");
+  }
+});

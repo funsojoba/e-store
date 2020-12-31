@@ -45,7 +45,7 @@
 
             <div class="aside-content-button">
                 <button id="check-out">CHECK OUT</button> &nbsp;
-                <button id="clear-cart">Clear cart</button>
+                <!-- <button id="clear-cart">Clear cart</button> -->
             </div>
         </div>
     </div>
@@ -111,59 +111,96 @@
         </div>
 
 
-        <footer>
-            <div class="subscribe">
-                <div class="subscribe-text">
-                    <p>Subscribe to our newsletter <br>
-                        to get updates on our latest offers!</p>
-                </div>
-                <div class="subscribe-form">
-                    <form>
-                        <input type="text" placeholder="example@example.com">
-                        <button>SUBSCRIBE</button>
-                    </form>
+    </div>
+
+            <!-- CHECK OUT MODAL -->
+            <div class="check-out-modal">
+                <div class="card">
+                    <div class="card-form">
+                        <div class="logos">
+    
+                        </div>
+                        <form>
+                            <label for="card-number">Card Number</label> <br>
+                            <input type="num" id="card-number" placeholder="1234 5678 9012 3456" required> <br>
+    
+                            <div class="card-date-container">
+                                <div class="card-date-content">
+                                    <label for="card-date">Date</label><br>
+                                    <input type="num" id="card-date" placeholder="12/20" required>
+                                </div>
+    
+                                <div class="card-cvv-content">
+                                    <label for="card-cvv">CVV</label><br>
+                                    <input type="num" id="card-cvv" placeholder="123" required>
+                                </div>
+                            </div>
+    
+                            <label for="card-name">Name on Card</label><br>
+                            <input type="text" required placeholder="John Doe Jane" id="card-name">
+                            
+                            <div class="card-total">
+                                <small id="card-total-amount"> </small>
+                            </div>
+                            <button id="card-check-out">CHECK OUT</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
-            <div class="link">
-                <div class="link-one">
-                    <ul>
-                        <li> <a href="#">Help Center</a> </li>
-                        <li> <a href="#">Return Policy</a> </li>
-                        <li> <a href="#">Delivery Policy</a> </li>
-                        <li> <a href="#">Privacy Policy</a> </li>
-                    </ul>
-                </div>
+    <footer>
+        <div class="subscribe">
+            <div class="subscribe-text">
+                <p>Subscribe to our newsletter <br>
+                    to get updates on our latest offers!</p>
+            </div>
+            <div class="subscribe-form">
+                <form>
+                    <input type="text" placeholder="example@example.com">
+                    <button>SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
 
-                <div class="link-one">
-                    <ul>
-                        <li> <a href="#">About EPIC</a> </li>
-                        <li> <a href="#">EPIC Wears</a> </li>
-                        <li> <a href="#">EPIC Logistics</a> </li>
-                        <li> <a href="#">EPIC This</a> </li>
-                        <li> <a href="#">EPIC That</a> </li>
-                        <li> <a href="#">Terms &amp; Conditions</a> </li>
-                    </ul>
-                </div>
-
-                <div class="link-social">
-                    <h3>JOIN US</h3>
-                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-                </div>
-
-                <div class="link-image">
-                    <img src="./asset/logo.png" alt="EPIC STORE">
-                    <h3>EPIC STORE</h3>
-                </div>
+        <div class="link">
+            <div class="link-one">
+                <ul>
+                    <li> <a href="#">Help Center</a> </li>
+                    <li> <a href="#">Return Policy</a> </li>
+                    <li> <a href="#">Delivery Policy</a> </li>
+                    <li> <a href="#">Privacy Policy</a> </li>
+                </ul>
             </div>
 
-            <div class="date">
-                &copy; EPIC STORE <span id="full-year"> 2020</span>
+            <div class="link-one">
+                <ul>
+                    <li> <a href="#">About EPIC</a> </li>
+                    <li> <a href="#">EPIC Wears</a> </li>
+                    <li> <a href="#">EPIC Logistics</a> </li>
+                    <li> <a href="#">EPIC This</a> </li>
+                    <li> <a href="#">EPIC That</a> </li>
+                    <li> <a href="#">Terms &amp; Conditions</a> </li>
+                </ul>
             </div>
-        </footer>
+
+            <div class="link-social">
+                <h3>JOIN US</h3>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+
+            <div class="link-image">
+                <img src="./asset/logo.png" alt="EPIC STORE">
+                <h3>EPIC STORE</h3>
+            </div>
+        </div>
+
+        <div class="date">
+            &copy; EPIC STORE <span id="full-year"> 2020</span>
+        </div>
+    </footer>
 
         <script src="./app.js"></script>
 </body>
